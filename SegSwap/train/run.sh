@@ -1,0 +1,28 @@
+torchrun --nproc_per_node=8 --master_port=29501 main.py \
+--train-dir ../true_data \
+--data-dir ../true_data \
+--batch-size 2 \
+--max-lr 1e-5 \
+--min-lr 1e-6 \
+--dice-weight 5 \
+--upsampler bilinear \
+--out-dir output/1102_dinov3cnlarge_dinov3large_dice5_bs16as16ep200_mxlr1e5_lp20lr1e4 \
+--lp-n-epoch 20 \
+--lp-iter-epoch 3200 \
+--lp-max-lr 1e-3 \
+--lp-min-lr 1e-4 \
+--n-epoch 200 \
+--iter-epoch 3200 \
+--gpu 0,1,2,3,4,5,6,7 \
+--image-size 512 \
+--feat-extractor dinov3_cn_large \
+--extractor-pretrain-pth ../model/dinov3_convnext_large_pretrain_lvd1689m-61fa432d.pth \
+--extractor-depth 2 \
+--backbone-size large \
+--backbone-type dinov3 \
+--vit-pretrained-pth ../model/dinov3_vitl16_pretrain_lvd1689m-8aa4cbdd.pth \
+--num-register-tokens 4 \
+--grad-accum 16 \
+--weight-decay 1e-3 \
+--consistency-weight 10 \
+--use-amp
