@@ -25,7 +25,7 @@ Since this procedure is time-consuming, we provide the preprocessed dataset we u
 
 **HANDAL-X Data.** Please follow the instructions in [ObjectRelator](https://github.com/lovelyqian/ObjectRelator/blob/main/docs/DATASET.md) to prepare the dataset and place it under `SegSwap/handal`.
 
-To simplify the pipeline, you may skip the JSON generation step by directly downloading our pre-generated annotation files, `handal_train_visual.json` and `handal_test_visual.json`, from [Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
+To simplify the pipeline, you may skip the JSON generation step by directly downloading our pre-generated annotation files, `handal_train_visual.json` and `handal_test_visual.json`, from [Google Drive](https://drive.google.com/drive/folders/1DDFQ3e2N8zlXTvmt7n5K91hEdO_DKYen?usp=sharing)/[Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
 
 
 ## 3. Training 
@@ -35,7 +35,7 @@ cd SegSwap/train
 bash run.sh
 ```
 
-We release our pretrained model `best_test_miou.pth` at [Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x), you can use it for quick inference.
+We release our pretrained model `best_test_miou.pth` at [Google Drive](https://drive.google.com/drive/folders/1DDFQ3e2N8zlXTvmt7n5K91hEdO_DKYen?usp=sharing)/[Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x), you can use it for quick inference.
 
 ## 4. Inference
 
@@ -51,7 +51,7 @@ cd SegSwap/train
 bash run_exo.sh
 ```
 
-the above command should produce a `ego-exo_test_results_ttt.json`/`exo-ego_test_results_ttt.json`/`ego-exo_test_results.json`/`exo-ego_test_results.json` file which can be then be used to run evaluation. We provide our inference results `exo-ego_test_results_ttt.json` and `exo-ego_test_results_ttt.json` at [Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
+the above command should produce a `ego-exo_test_results_ttt.json`/`exo-ego_test_results_ttt.json`/`ego-exo_test_results.json`/`exo-ego_test_results.json` file which can be then be used to run evaluation. We provide our inference results `exo-ego_test_results_ttt.json` and `exo-ego_test_results_ttt.json` at [Google Drive](https://drive.google.com/drive/folders/1DDFQ3e2N8zlXTvmt7n5K91hEdO_DKYen?usp=sharing)/[Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
 
 ## 5. Evaluation
 
@@ -63,7 +63,7 @@ cd evaluation
 python process_annotations.py --data_path ../SegSwap/true_data --annotations_path /data/egoexo/annotations/relations_test.json --split test --output_path ../SegSwap/output/correspondence-gt.json
 ```
 
-To simplify the pipeline, you may directly downloading our pre-generated annotation files `correspondence-gt.json` from [Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
+To simplify the pipeline, you may directly downloading our pre-generated annotation files `correspondence-gt.json` from [Google Drive](https://drive.google.com/drive/folders/1DDFQ3e2N8zlXTvmt7n5K91hEdO_DKYen?usp=sharing)/[Baidu Netdisk](https://pan.baidu.com/s/1aOSl6AlREePafaXSl8KS4Q?pwd=fs8x).
 
 then run the following command:
 
